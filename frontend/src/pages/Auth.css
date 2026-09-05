@@ -1,0 +1,335 @@
+/* ================================================
+   AUTH PAGE STYLES — Olive Green Theme & Official Logo
+   ================================================ */
+
+.auth-page-wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1d2817 0%, #2e3d25 50%, #1d2817 100%);
+  padding: 24px;
+  overflow: hidden;
+  position: relative;
+}
+
+.auth-header-brand {
+  margin-bottom: 24px;
+  text-align: center;
+  z-index: 10;
+}
+
+.auth-brand-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.auth-official-logo-box {
+  width: 52px;
+  height: 52px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  border: 1.5px solid #c3d2b9;
+}
+
+.auth-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.auth-main-title {
+  font-size: 26px;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.auth-main-sub {
+  font-size: 13px;
+  color: #c3d2b9;
+  margin-top: 2px;
+  font-weight: 500;
+}
+
+/* 3D Card Sizing & Theme */
+.doodle-wrapper {
+  --ink: #1d2817;
+  --paper-front: #ffffff;
+  --paper-back: #f5f4ef;
+  --bg-color: #ffffff;
+  --primary-btn: #556b2f;
+  --primary-btn-hover: #3b4d1f;
+  --secondary-btn: #1d2817;
+  --secondary-btn-hover: #2e3d25;
+  --switch-bg: #c3d2b9;
+  --input-focus: #556b2f;
+
+  --card-width: 360px;
+  --card-height: 420px;
+  --input-width: 290px;
+  --input-height: 42px;
+  --btn-width: 160px;
+  --btn-height: 44px;
+
+  --border-width: 2px;
+  --shadow-offset: 4px;
+
+  --sketch-radius-1: 14px;
+  --sketch-radius-2: 14px;
+  --sketch-radius-btn: 10px;
+
+  font-family: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.doodle-toggle {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.doodle-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  z-index: 5;
+}
+
+.doodle-mode-text {
+  font-size: 16px;
+  font-weight: 800;
+  color: #ffffff;
+  transition: opacity 0.3s;
+}
+
+.doodle-toggle:not(:checked) ~ .doodle-header .signup-text {
+  opacity: 0.5;
+}
+.doodle-toggle:checked ~ .doodle-header .login-text {
+  opacity: 0.5;
+}
+
+.doodle-switch-label {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+  background-color: var(--switch-bg);
+  border: var(--border-width) solid var(--ink);
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 2px 2px 0px var(--ink);
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.doodle-switch-label:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px var(--ink);
+}
+
+.doodle-switch-handle {
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  width: 16px;
+  height: 16px;
+  background-color: #ffffff;
+  border: var(--border-width) solid var(--ink);
+  border-radius: 50%;
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.doodle-toggle:checked
+  ~ .doodle-header
+  .doodle-switch-label
+  .doodle-switch-handle {
+  transform: translateX(24px);
+}
+
+.doodle-card-scene {
+  position: relative;
+  perspective: 1000px;
+  width: var(--card-width);
+  height: var(--card-height);
+  z-index: 2;
+}
+
+.doodle-svg {
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+}
+.doodle-star {
+  top: -25px;
+  left: -35px;
+  width: 48px;
+  height: 48px;
+  animation: float-star 4s ease-in-out infinite;
+}
+.doodle-sparkle {
+  bottom: -20px;
+  right: -25px;
+  width: 40px;
+  height: 40px;
+  animation: float-sparkle 4s ease-in-out infinite 1s;
+}
+
+@keyframes float-star {
+  0%, 100% { transform: translateY(0) rotate(-15deg); }
+  50% { transform: translateY(-8px) rotate(-10deg); }
+}
+@keyframes float-sparkle {
+  0%, 100% { transform: translateY(0) rotate(10deg); }
+  50% { transform: translateY(-8px) rotate(15deg); }
+}
+
+.doodle-card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.doodle-toggle:checked ~ .doodle-card-scene .doodle-card-inner {
+  transform: rotateY(180deg);
+}
+
+.doodle-card-front,
+.doodle-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  box-sizing: border-box;
+  border: var(--border-width) solid var(--ink);
+  border-radius: var(--sketch-radius-1);
+  box-shadow: var(--shadow-offset) var(--shadow-offset) 0px var(--ink);
+}
+
+.doodle-card-front {
+  background-color: var(--paper-front);
+}
+
+.doodle-card-back {
+  background-color: var(--paper-back);
+  transform: rotateY(180deg);
+  border-radius: var(--sketch-radius-2);
+}
+
+.doodle-title {
+  font-size: 22px;
+  font-weight: 900;
+  color: var(--ink);
+  margin: 0 0 16px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.doodle-title-alt {
+  margin: 0 0 16px 0;
+  color: #3b4d1f;
+}
+
+.doodle-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  align-items: center;
+}
+
+.doodle-input-wrapper {
+  position: relative;
+}
+
+.doodle-input {
+  width: var(--input-width);
+  height: var(--input-height);
+  padding: 5px 15px;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  background-color: var(--bg-color);
+  border: var(--border-width) solid var(--ink);
+  border-radius: var(--sketch-radius-1);
+  box-shadow: 3px 3px 0px var(--ink);
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.doodle-input::placeholder {
+  color: #8a9883;
+}
+
+.doodle-input:focus {
+  border-color: #556b2f;
+  box-shadow: 4px 4px 0px var(--ink);
+}
+
+.auth-credentials-hint {
+  background: #e9ede4;
+  border: 1px solid #c3d2b9;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 11px;
+  color: #22311d;
+  width: var(--input-width);
+  text-align: left;
+  line-height: 1.4;
+}
+
+.auth-credentials-hint code {
+  font-weight: 700;
+  color: #3b4d1f;
+}
+
+.doodle-btn {
+  margin-top: 6px;
+  width: var(--btn-width);
+  height: var(--btn-height);
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 800;
+  color: #ffffff;
+  background-color: var(--primary-btn);
+  border: var(--border-width) solid var(--ink);
+  border-radius: var(--sketch-radius-btn);
+  box-shadow: 4px 4px 0px var(--ink);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.doodle-btn-alt {
+  background-color: var(--secondary-btn);
+}
+
+.doodle-btn:hover {
+  background-color: var(--primary-btn-hover);
+  transform: translateY(-2px);
+  box-shadow: 5px 5px 0px var(--ink);
+}

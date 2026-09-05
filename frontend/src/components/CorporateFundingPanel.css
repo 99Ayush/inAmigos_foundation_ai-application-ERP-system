@@ -1,0 +1,94 @@
+/* ================================================
+   CORPORATE CSR FUNDING PROPOSALS TABLE & CARD
+   Compact & Minimized
+   ================================================ */
+
+.csr-proposals-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.csr-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.csr-header h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.csr-header p {
+  font-size: 11px;
+  color: #64748b;
+  margin-top: 1px;
+}
+
+.csr-proposals-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Minimized Proposal Row */
+.csr-proposal-row {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+
+.csr-proposal-row:hover {
+  background: #ffffff;
+  border-color: #7c3aed;
+  box-shadow: 0 2px 8px rgba(124, 58, 237, 0.06);
+}
+
+.csr-row-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.csr-company-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.csr-amount-badge {
+  font-size: 12px;
+  font-weight: 800;
+  color: #7c3aed;
+  background: #f5f3ff;
+  border: 1px solid #ddd6fe;
+  padding: 2px 8px;
+  border-radius: 999px;
+}
+
+.csr-compact-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #475569;
+  background: #ffffff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #edf2f7;
+}

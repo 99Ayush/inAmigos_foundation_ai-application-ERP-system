@@ -1,0 +1,68 @@
+/* ================================================
+   AUDIT TRAIL & CSR COMPLIANCE LOG VIEW
+   ================================================ */
+
+.audit-trail-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.audit-header-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+}
+
+.audit-log-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+}
+
+.audit-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.audit-table th {
+  text-align: left;
+  font-size: 11px;
+  font-weight: 700;
+  color: #64748b;
+  text-transform: uppercase;
+  padding: 10px 14px;
+  border-bottom: 1px solid #e2e8f0;
+  background: #f8fafc;
+}
+
+.audit-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #f1f5f9;
+  color: #1e293b;
+}
+
+.audit-table tr:hover {
+  background: #f8fafc;
+}
+
+.audit-badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 999px;
+  display: inline-block;
+}
+
+.audit-badge.grant { background: #f5f3ff; color: #7c3aed; border: 1px solid #ddd6fe; }
+.audit-badge.triage { background: #ecfdf5; color: #047857; border: 1px solid #a7f3d0; }
+.audit-badge.security { background: #eff6ff; color: #1d4ed8; border: 1px solid #bfdbfe; }

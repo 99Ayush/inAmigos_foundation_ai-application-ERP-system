@@ -1,0 +1,154 @@
+/* ================================================
+   RUNNING INITIATIVES OPERATIONS MONITOR
+   Compact, Clean & High-Density
+   ================================================ */
+
+.initiatives-monitor-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.monitor-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.monitor-header h3 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.monitor-header p {
+  font-size: 11px;
+  color: #64748b;
+  margin-top: 1px;
+}
+
+.live-pulse {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10b981;
+  display: inline-block;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
+}
+
+.initiatives-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Minimized Clean Card */
+.initiative-row-item {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+
+.initiative-row-item:hover {
+  background: #ffffff;
+  border-color: #059669;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+}
+
+.init-row-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.init-title-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.init-icon-badge {
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+}
+
+.init-name-text {
+  font-size: 13px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.init-category-tag {
+  font-size: 10px;
+  color: #64748b;
+}
+
+/* 1 Extra Choice Info: Volunteers & Progress */
+.init-compact-metrics {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  font-weight: 600;
+  color: #475569;
+  background: #ffffff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #edf2f7;
+}
+
+.init-prog-track {
+  width: 80px;
+  height: 5px;
+  background: #e2e8f0;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.init-prog-fill {
+  height: 100%;
+  background: #059669;
+  border-radius: 999px;
+}
+
+.btn-more-tab-link {
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #334155;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.15s;
+}
+
+.btn-more-tab-link:hover {
+  background: #0f172a;
+  color: #ffffff;
+  border-color: #0f172a;
+}

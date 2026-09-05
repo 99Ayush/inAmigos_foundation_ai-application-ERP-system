@@ -1,0 +1,21 @@
+# Logs
+*.log
+logs/
+
+# Node dependencies & builds
+node_modules/
+**/node_modules/
+dist/
+dist-ssr/
+*.local
+.env
+**/.env
+
+# System & Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Windows desktop shortcut files
+*.lnk

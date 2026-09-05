@@ -1,0 +1,95 @@
+/* ================================================
+   INAMIGOS ERP — GLOBAL DESIGN SYSTEM
+   Olive Green & Earthy Warm Creative Palette
+   ================================================ */
+
+:root {
+  /* Core Earthy Olive Palette */
+  --bg-page:        #f5f4ef;
+  --bg-card:        #ffffff;
+  --bg-sidebar:     #ffffff;
+  --bg-sidebar-active: #e9ede4;
+
+  /* Text */
+  --text-primary:   #22311d;
+  --text-secondary: #576550;
+  --text-muted:     #8a9883;
+
+  /* Brand - Olive Green Primary */
+  --brand-olive:    #556b2f;
+  --brand-olive-dark: #3b4d1f;
+  --brand-olive-lt: #e9ede4;
+  --brand-olive-border: #c3d2b9;
+
+  --brand-green:    #4a5d23;
+  --brand-green-lt: #dce6d2;
+  --brand-dark:     #1d2817;
+
+  /* Status Colors */
+  --status-green:   #4a5d23;
+  --status-green-bg: #e9ede4;
+  --status-amber:   #d97706;
+  --status-amber-bg: #fef3c7;
+  --status-red:     #dc2626;
+  --status-red-bg:  #fef2f2;
+  --status-blue:    #2563eb;
+  --status-blue-bg: #eff6ff;
+  --status-purple:  #7c3aed;
+  --status-purple-bg: #f5f3ff;
+  --status-gray:    #576550;
+  --status-gray-bg: #f5f4ef;
+
+  /* Layout */
+  --sidebar-width:  60px;
+  --header-height:  60px;
+  --radius-sm:      6px;
+  --radius-md:      10px;
+  --radius-lg:      14px;
+
+  /* Shadows */
+  --shadow-card:    0 1px 3px rgba(34,49,29,0.06), 0 1px 2px rgba(34,49,29,0.04);
+  --shadow-hover:   0 4px 14px rgba(34,49,29,0.12);
+
+  /* Typography */
+  --font-base:      -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+
+  /* Borders */
+  --border:         1px solid #e1e7db;
+  --border-color:   #e1e7db;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: var(--font-base);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-primary);
+  background: var(--bg-page);
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input, select, textarea {
+  font-family: inherit;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #c3d2b9; border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: #8a9883; }

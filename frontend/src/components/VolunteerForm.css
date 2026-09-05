@@ -1,0 +1,508 @@
+/* ═══════════════════════════════════════════════
+   VOLUNTEER FORM — Clean Modern Multi-Step UX
+   ═══════════════════════════════════════════════ */
+
+.vf-wrapper {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+/* ─── Step Indicator ─── */
+.vf-steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin-bottom: 32px;
+  padding: 0 40px;
+}
+
+.vf-step {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #94a3b8;
+  transition: color 0.2s;
+}
+
+.vf-step.active {
+  color: #059669;
+}
+
+.vf-step-dot {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #e2e8f0;
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 800;
+  transition: all 0.2s;
+}
+
+.vf-step.active .vf-step-dot {
+  background: #059669;
+  color: #fff;
+  box-shadow: 0 0 0 4px rgba(5, 150, 105, 0.12);
+}
+
+.vf-step-line {
+  flex: 1;
+  height: 2px;
+  background: #e2e8f0;
+  margin: 0 16px;
+}
+
+/* ─── Section Headers ─── */
+.vf-section-header {
+  margin-bottom: 24px;
+}
+
+.vf-section-header h2 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.3px;
+}
+
+.vf-section-header p {
+  font-size: 14px;
+  color: #64748b;
+  margin-top: 4px;
+}
+
+/* ─── Initiative Picker Grid ─── */
+.vf-initiative-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.vf-init-card {
+  background: #fff;
+  border: 2px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+}
+
+.vf-init-card:hover {
+  border-color: #a7f3d0;
+  box-shadow: 0 4px 16px rgba(5, 150, 105, 0.08);
+  transform: translateY(-2px);
+}
+
+.vf-init-card.selected {
+  border-color: #059669;
+  background: #f0fdf4;
+  box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.12);
+}
+
+.vf-init-card-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.vf-init-icon {
+  font-size: 28px;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.vf-init-meta h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+.vf-init-category {
+  font-size: 11px;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.vf-init-check {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #059669;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.vf-init-desc {
+  font-size: 12px;
+  color: #475569;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.vf-init-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.vf-skill-tag {
+  background: #f0fdf4;
+  color: #059669;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 999px;
+  border: 1px solid #a7f3d0;
+}
+
+.vf-init-card.selected .vf-skill-tag {
+  background: #dcfce7;
+}
+
+.vf-init-footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 12px;
+  margin-top: auto;
+}
+
+.vf-init-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.vf-init-stat-val {
+  font-size: 12px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.vf-init-stat-lbl {
+  font-size: 9px;
+  font-weight: 600;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ─── Step Actions ─── */
+.vf-step-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.vf-btn-primary {
+  background: #059669;
+  color: #fff;
+  border: none;
+  padding: 11px 24px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.vf-btn-primary:hover {
+  background: #047857;
+  box-shadow: 0 2px 8px rgba(5, 150, 105, 0.25);
+}
+
+.vf-btn-primary:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.vf-btn-secondary {
+  background: #f8fafc;
+  color: #334155;
+  border: 1px solid #e2e8f0;
+  padding: 11px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.vf-btn-secondary:hover {
+  background: #f1f5f9;
+}
+
+/* ─── Selected Initiative Banner (Step 2) ─── */
+.vf-selected-banner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #f0fdf4;
+  border: 1px solid #a7f3d0;
+  border-radius: 12px;
+  padding: 14px 18px;
+  margin-bottom: 24px;
+}
+
+.vf-selected-icon {
+  font-size: 24px;
+}
+
+.vf-selected-banner strong {
+  font-size: 14px;
+  color: #0f172a;
+  display: block;
+}
+
+.vf-selected-sub {
+  font-size: 12px;
+  color: #64748b;
+  display: block;
+  margin-top: 2px;
+}
+
+.vf-change-btn {
+  margin-left: auto;
+  background: #fff;
+  border: 1px solid #a7f3d0;
+  color: #059669;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.vf-change-btn:hover {
+  background: #dcfce7;
+}
+
+/* ─── Form Grid (Step 2) ─── */
+.vf-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.vf-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.vf-field.full {
+  grid-column: span 2;
+}
+
+.vf-field label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.vf-field label .required {
+  color: #dc2626;
+}
+
+.vf-field input,
+.vf-field textarea {
+  padding: 10px 14px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #0f172a;
+  background: #fff;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  font-family: inherit;
+}
+
+.vf-field input:focus,
+.vf-field textarea:focus {
+  outline: none;
+  border-color: #059669;
+  box-shadow: 0 0 0 3px rgba(5, 150, 105, 0.1);
+}
+
+.vf-field input.error,
+.vf-field textarea.error {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.08);
+}
+
+.vf-field input::placeholder,
+.vf-field textarea::placeholder {
+  color: #94a3b8;
+}
+
+.vf-error {
+  font-size: 12px;
+  color: #dc2626;
+  font-weight: 500;
+}
+
+.vf-hint {
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+/* ─── Success Screen (Step 3) ─── */
+.vf-success-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 48px 40px;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+}
+
+.vf-success-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #059669;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  box-shadow: 0 0 0 8px rgba(5, 150, 105, 0.1);
+}
+
+.vf-success-icon.warning {
+  background: #d97706;
+  box-shadow: 0 0 0 8px rgba(217, 119, 6, 0.1);
+}
+
+.vf-success-card h2 {
+  font-size: 24px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.vf-success-sub {
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 24px;
+}
+
+.vf-ai-result-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: left;
+  margin: 0 auto 24px;
+  max-width: 420px;
+}
+
+.vf-ai-result-card.low-match {
+  background: #fffbeb;
+  border-color: #fde68a;
+}
+
+.vf-ai-result-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 14px;
+}
+
+.vf-ai-result-body {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.vf-ai-match {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.vf-ai-label {
+  font-size: 10px;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.vf-ai-value {
+  font-size: 15px;
+  font-weight: 800;
+  color: #059669;
+}
+
+.vf-ai-confidence {
+  font-size: 20px;
+}
+
+.vf-ai-reasoning {
+  font-size: 12px;
+  color: #475569;
+  line-height: 1.5;
+  margin: 0;
+  padding-top: 10px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.vf-success-footer {
+  font-size: 13px;
+  color: #94a3b8;
+  margin-top: 8px;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 768px) {
+  .vf-initiative-grid {
+    grid-template-columns: 1fr;
+  }
+  .vf-form-grid {
+    grid-template-columns: 1fr;
+  }
+  .vf-field.full {
+    grid-column: span 1;
+  }
+  .vf-step-actions {
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+  .vf-step-actions .vf-btn-primary,
+  .vf-step-actions .vf-btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+  .vf-success-card {
+    padding: 32px 20px;
+  }
+}
