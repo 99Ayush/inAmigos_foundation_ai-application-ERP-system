@@ -1,5 +1,5 @@
 
-
+ 
 const mockApplications = [
   {
     APPLICATION_ID: 101,
