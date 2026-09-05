@@ -1,5 +1,4 @@
-﻿// frontend/src/data/mockData.js
-// 37 Comprehensive Mock Volunteer Applications, CSR Proposals, and Audit Logs
+
 
 const mockApplications = [
   {
