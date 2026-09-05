@@ -1,7 +1,3 @@
--- ====================================================================
--- InAmigos Foundation ERP — Production Supabase / PostgreSQL Schema
--- Run this script directly in your Supabase SQL Editor or Render Postgres
--- ====================================================================
 
 -- 1. DROP EXISTING TABLES IF ANY
 DROP TABLE IF EXISTS VOLUNTEER_APPLICATIONS CASCADE;
